@@ -27,8 +27,6 @@ if (UNIX AND NOT APPLE)
 endif()
 
 if (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/SDL2-${sbwrp_SDL_VERSION}/include/")
-  file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/SDL2-${sbwrp_SDL_VERSION})
-
   if (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/SDL2-${sbwrp_SDL_VERSION}.tar.gz")
     execute_process(
       COMMAND wget https://www.libsdl.org/release/SDL2-${sbwrp_SDL_VERSION}.tar.gz
